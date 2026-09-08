@@ -1,40 +1,16 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Creative Navbar — TTT</title>
+    <link rel="stylesheet" href="style.css" />
     <style>
-        :root{--accent:#000000;--glass: rgba(235, 0, 0, 0.06);--bg1:#000000;--bg2:#071126}
-        *{box-sizing:border-box;margin:0;padding:0}
-        html,body{height:100%;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial}
-        body{background:linear-gradient(160deg,var(--bg1),var(--bg2));color:#005ed1;display:flex;align-items:flex-start;justify-content:center;padding:48px}
-        .site{width:100%;max-width:1100px}
-        header.navbar{position:relative;display:flex;align-items:center;justify-content:space-between;padding:12px 18px;border-radius:14px;background:linear-gradient(135deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));backdrop-filter: blur(8px);box-shadow:0 6px 30px rgba(2,6,23,0.6);overflow:hidden}
-        .brand{display:flex;align-items:center;gap:12px}
-        .logo{width:44px;height:44px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,#06b6d4,#7c3aed);font-weight:700;color:white}
-        .sitename{font-size:18px;font-weight:700;letter-spacing:0.2px}
-        nav.links{display:flex;align-items:center;gap:8px}
-        .nav-list{display:flex;gap:6px;list-style:none;padding:8px}
-        .nav-list li{position:relative}
-        .nav-list a{display:inline-block;padding:10px 14px;border-radius:10px;color:inherit;text-decoration:none;font-weight:600;opacity:0.9;transition:transform .22s ease,opacity .18s ease}
-        .nav-list a:hover{transform:translateY(-3px);opacity:1}
-        .cta{margin-left:10px;padding:8px 12px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#06b6d4);color:white;font-weight:700;border:none;cursor:pointer}
-        .indicator{position:absolute;bottom:6px;height:3px;width:60px;background:linear-gradient(90deg,#06b6d4,var(--accent));border-radius:999px;transition:transform .28s cubic-bezier(.2,.9,.2,1),width .28s}
-        .search{margin-left:12px;background:var(--glass);padding:8px;border-radius:10px;display:flex;gap:8px;align-items:center}
-        .search input{background:transparent;border:0;color:inherit;outline:0;width:140px}
-        .hamburger{display:none;cursor:pointer;padding:8px;border-radius:8px;background:transparent;border:0}
-        .dropdown{position:absolute;top:56px;left:0;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:10px;padding:8px;box-shadow:0 6px 18px rgba(2,6,23,0.5);display:none}
-        .nav-list li:focus-within .dropdown, .nav-list li:hover .dropdown{display:block}
-        main.demo{margin-top:20px;padding:24px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);box-shadow:inset 0 1px 0 rgba(255,255,255,0.02)}
-        @media (max-width:800px){
-            .nav-list{display:none;position:absolute;left:12px;right:12px;top:64px;flex-direction:column;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:12px;border-radius:10px}
-            .hamburger{display:inline-grid}
-            .nav-list.open{display:flex}
-            .search{display:none}
-        }
+    
     </style>
 </head>
+
 <body>
     <div class="site">
         <header class="navbar" role="banner">
@@ -48,7 +24,10 @@
 
             <nav class="links" role="navigation" aria-label="Main">
                 <button class="hamburger" aria-expanded="false" aria-controls="primaryNav" title="Menu">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.6"
+                            stroke-linecap="round" />
+                    </svg>
                 </button>
 
                 <ul id="primaryNav" class="nav-list" role="menubar">
@@ -66,7 +45,12 @@
                 </ul>
 
                 <div class="search" aria-hidden="false">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
                     <input type="search" placeholder="Search" aria-label="Search" />
                 </div>
 
@@ -78,54 +62,13 @@
 
         <main class="demo">
             <h2 id="home">Welcome</h2>
-            <p style="margin-top:10px;opacity:.9;line-height:1.6">This is a demo page showcasing a creative navigation bar with subtle animations, dropdowns, and mobile support. Click the links to see the active indicator move.</p>
+            <p style="margin-top:10px;opacity:.9;line-height:1.6">This is a demo page showcasing a creative navigation
+                bar with subtle animations, dropdowns, and mobile support. Click the links to see the active indicator
+                move.</p>
         </main>
     </div>
 
-    <script>
-        (function(){
-            const nav = document.querySelector('.nav-list');
-            const items = [...document.querySelectorAll('.nav-list a')];
-            const indicator = document.querySelector('.indicator');
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.getElementById('primaryNav');
-
-            function updateIndicator(el){
-                if(!el) return indicator.style.transform='translateX(-9999px)';
-                const rect = el.getBoundingClientRect();
-                const parentRect = nav.getBoundingClientRect();
-                const left = rect.left - parentRect.left + (rect.width - Math.max(48, rect.width)) / 2;
-                indicator.style.width = Math.max(48, rect.width) + 'px';
-                indicator.style.transform = 'translateX(' + (rect.left - parentRect.left) + 'px)';
-            }
-
-            items.forEach(a=>{
-                a.addEventListener('click', e=>{
-                    e.preventDefault();
-                    items.forEach(i=>i.classList.remove('active'));
-                    a.classList.add('active');
-                    updateIndicator(a);
-                    const target = document.querySelector(a.getAttribute('href'));
-                    if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
-                    if(nav.classList.contains('open')) nav.classList.remove('open');
-                });
-                a.addEventListener('mouseenter', ()=> updateIndicator(a));
-            });
-
-            document.addEventListener('click', e=>{
-                if(!nav.contains(e.target) && !e.target.closest('.hamburger')) updateIndicator();
-            });
-
-            window.addEventListener('load', ()=>{
-                const first = items[0];
-                updateIndicator(first);
-            });
-
-            hamburger.addEventListener('click', ()=>{
-                const open = nav.classList.toggle('open');
-                hamburger.setAttribute('aria-expanded', String(open));
-            });
-        })();
-    </script>
+    <script src="scripts.js"></script>
 </body>
+
 </html>
