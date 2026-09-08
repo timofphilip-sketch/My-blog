@@ -18,8 +18,8 @@
         }
 
         body {
-            background: linear-gradient(160deg, var(--bg1), var(--bg2));
-            color: #005ed1;
+            background: #dc6921;
+            color: #000000;
             display: flex;
             align-items: flex-start;
             justify-content: center;
