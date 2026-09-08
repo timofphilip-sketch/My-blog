@@ -33,6 +33,7 @@
 
         header.navbar {
             position: relative;
+            z-index: 1000;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -41,7 +42,7 @@
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
             backdrop-filter: blur(8px);
             box-shadow: 0 6px 30px rgba(2, 6, 23, 0.6);
-            overflow: hidden
+            overflow: visible
         }
 
         .brand {
@@ -82,6 +83,15 @@
 
         .nav-list li {
             position: relative
+        }
+
+        .nav-list li::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 24px;
         }
 
         .nav-list a {
@@ -150,18 +160,40 @@
 
         .dropdown {
             position: absolute;
-            top: 56px;
+            top: calc(100% + 24px);
             left: 0;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+            min-width: 170px;
+            background: #ffffff;
             border-radius: 10px;
             padding: 8px;
             box-shadow: 0 6px 18px rgba(2, 6, 23, 0.5);
-            display: none
+            display: block;
+            opacity: 0;
+            pointer-events: none;
+            visibility: hidden;
+            transform: translateY(-6px);
+            transition: opacity .18s ease, transform .18s ease, visibility 0s linear .18s;
+            z-index: 9999
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 8px;
+            border-radius: 8px;
+            white-space: nowrap
+        }
+
+        .dropdown a:hover {
+            background: rgba(255, 255, 255, 0.1)
         }
 
         .nav-list li:focus-within .dropdown,
         .nav-list li:hover .dropdown {
-            display: block
+            opacity: 1;
+            pointer-events: auto;
+            visibility: visible;
+            transform: translateY(0);
+            transition-delay: 0s
         }
 
         main.demo {
